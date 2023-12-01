@@ -1,17 +1,24 @@
 package com.transferz.dao;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
-public class Flight
-{
-	private String code;
+public class Flight {
+    @Id
+    @Column(name = "code", length = 20)
+    private String code;
 
-	private String originAirportId;
+    @Column(name = "origin_airport_id", length = 20)
+    private String originAirportId;
 
-	private String destinationAirportId;
+    @Column(name = "destination_airport_id", length = 20)
+    private String destinationAirportId;
 
-	private LocalDateTime departureTime;
+    @Column(name = "departure_time")
+    private LocalDateTime departureTime;
 
-	private LocalDateTime arrivalTime;
-	
+    @Column(name = "arrival_time")
+    private LocalDateTime arrivalTime;
+
 }
