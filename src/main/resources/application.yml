@@ -3,12 +3,14 @@ server:
   shutdown: graceful
 spring:
   datasource:
-    url:
-    username:
-    password:
+    url: jdbc:postgresql://localhost:5432/mydatabase
+    username: myuser
+    password: secret
     driver-class-name:
   jpa:
-    show-sql:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
   jackson:
     serialization:
       write-dates-as-timestamps: false
