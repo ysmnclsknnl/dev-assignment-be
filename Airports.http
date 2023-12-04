@@ -1,0 +1,8 @@
+POST http://localhost:8080/api/airports
+Content-Type: application/json
+
+{
+  "code": "XYZ123",
+  "name": "Example Airport",
+  "country": "Example Country"
+}
